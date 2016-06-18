@@ -21,13 +21,14 @@ function mapStateToProps (state) {
 //   }
 // }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TabsRoot)
-
 function mapDispatchToProps (dispatch) {
   return {
     dispatch
   }
 }
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TabsRoot)
+
