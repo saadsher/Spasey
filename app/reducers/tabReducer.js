@@ -1,8 +1,8 @@
-// import { NavigationExperimental } from 'react-native'
-import { CHANGE_TAB } from '../constants/ActionTypes'
-// const {
-//  Reducer: NavigationReducer
-// } = NavigationExperimental
+import { NavigationExperimental } from 'react-native'
+// import { CHANGE_TAB } from '../constants/ActionTypes'
+const {
+ Reducer: NavigationReducer
+} = NavigationExperimental
 
 const homeIcon = {
   scale: 2.3,
@@ -23,30 +23,30 @@ const tabs = [
   { key: 'samples', icon: sampleIcon, title: 'Samples' }
 ]
 
-const initialState = {
-  index: 0,
-  routes: tabs
-}
+// const initialState = {
+//   index: 0,
+//   tabs
+// }
 
-function tabsNav (state = initialState, action) {
-  if (action.index === state.index) return state
-  switch (action.type) {
-    case CHANGE_TAB:
-      return {
-        ...state,
-        index: action.index
-      }
-    default:
-      return state
-  }
-}
+// function tabsNav (state = initialState, action) {
+//   if (action.index === state.index) return state
+//   switch (action.type) {
+//     case CHANGE_TAB:
+//       return {
+//         ...state,
+//         index: action.index
+//       }
+//     default:
+//       return state
+//   }
+// }
 
-export default tabsNav
+// export default tabsNav
 
-// const tabState = NavigationReducer.TabsReducer({
-//   key: 'Tabs',
-//   initialIndex: 0,
-//   tabReducers: tabs.map((t) => (lastRoute) => lastRoute || t)
-// })
+const tabState = NavigationReducer.TabsReducer({
+  key: 'Tabs',
+  initialIndex: 0,
+  tabReducers: tabs.map((t) => (lastRoute) => lastRoute || t)
+})
 
-// export default tabState
+export default tabState

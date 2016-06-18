@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import TabsRoot from '../components/TabsRoot'
-import { changeTab } from '../actions/navActions'
+// import { changeTab } from '../actions/navActions'
 
 function mapStateToProps (state) {
   return {
@@ -8,12 +8,12 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  {
-    changeTab: (route) => changeTab(route)
-  }
-)(TabsRoot)
+// export default connect(
+//   mapStateToProps,
+//   {
+//     changeTab: (route) => changeTab(route)
+//   }
+// )(TabsRoot)
 
 // function mapDispatchToProps (dispatch) {
 //   return {
@@ -21,13 +21,13 @@ export default connect(
 //   }
 // }
 
-// export default connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(TabsRoot)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TabsRoot)
 
-// function mapDispatchToProps (dispatch) {
-//   return {
-//     dispatch
-//   }
-// }
+function mapDispatchToProps (dispatch) {
+  return {
+    dispatch
+  }
+}

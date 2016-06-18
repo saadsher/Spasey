@@ -9,9 +9,10 @@ import Home from '../containers/navRootContainer'
 
 class Tabs extends Component {
   _changeTab (i) {
-    const { dispatch, changeTab } = this.props
-    // dispatch(JumpToAction(i))
-    changeTab(i)
+    // const { changeTab } = this.props
+    const { dispatch } = this.props
+    dispatch(JumpToAction(i))
+    // changeTab(i)
   }
   _renderTabContent (key) {
     switch (key) {
@@ -21,11 +22,10 @@ class Tabs extends Component {
         return <Recipes />
       case 'samples':
         return <Samples />
-      default:
-        return <View />
     }
   }
   render () {
+    console.log('props: ', this.props)
     const tabs = this.props.tabs.routes.map((tab, i) => {
       return (
         <TabBarIOS.Item key={tab.key}
