@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
+import Valet from './Valet'
+import Postal from './Postal'
+import Chat from './Chat'
+import Service from './Service'
+import Feedback from './Feedback'
+import Profile from './Profile'
+import MapboxList from './MapboxList'
 import Home from './Home'
-import About from './About'
 
 import {
   BackAndroid,
@@ -28,11 +34,29 @@ class NavRoot extends Component {
     const prefix = 'scene_'
     const { scene } = props
     if (scene.key === prefix + 'home') {
-      return <Home _handleNavigate={this._handleNavigate.bind(this)} />
+      return <Home />
     }
-    if (scene.key === prefix + 'about') {
-      return <About _goBack={this._handleBackAction.bind(this)} />
+    // if (scene.key === prefix + 'mapboxlist') {
+    //   return <MapboxList />
+    // }
+    // if (scene.key === prefix + 'feedback') {
+    //   return <Feedback />
+    // }
+    if (scene.key === prefix + 'service') {
+      return <Service _handleNavigate={this._handleNavigate.bind(this)} />
     }
+    if (scene.key === prefix + 'chat') {
+      return <Chat _goBack={this._handleBackAction.bind(this)} />
+    }
+    if (scene.key === prefix + 'postal') {
+      return <Postal _goBack={this._handleBackAction.bind(this)} />
+    }
+    if (scene.key === prefix + 'valet') {
+      return <Valet _goBack={this._handleBackAction.bind(this)} />
+    }
+    // if (scene.key === prefix + 'profile') {
+    //   return <Profile />
+    // }
   }
   _handleBackAction () {
     if (this.props.navigation.index === 0) {
@@ -56,10 +80,11 @@ class NavRoot extends Component {
   render () {
     return (
       <NavigationCardStack
-        style={{flex: 1}}
+        style={{flex:1}}
         navigationState={this.props.navigation}
         onNavigate={this._handleNavigate.bind(this)}
-        renderScene={this._renderScene} />
+        renderScene={this._renderScene}
+      />
     )
   }
 }

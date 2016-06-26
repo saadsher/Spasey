@@ -12,4 +12,4 @@ const App = () => (
     <NavigationRootContainer />
   </Provider>
 )
-AppRegistry.registerComponent('RNExperimentalRedux', () => App)
+AppRegistry.registerComponent('Spasey', () => App)

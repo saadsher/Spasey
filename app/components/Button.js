@@ -10,7 +10,12 @@ export default ({label, onPress}) => (
 
 const styles = StyleSheet.create({
   button: {
-    height: 70,
+    position: 'absolute',
+    right: 10,
+    top: 0,
+    marginTop: 30,
+    padding: 10,
+    height: 50,
     backgroundColor: '#22a3ed',
     justifyContent: 'center',
     alignItems: 'center'

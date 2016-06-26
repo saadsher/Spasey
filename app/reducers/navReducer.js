@@ -9,8 +9,8 @@ const initialState = {
   key: 'root',
   routes: [
     {
-      key: 'home',
-      title: 'Welcome Home'
+      key: 'service',
+      title: 'Concierge & Residential'
     }
   ]
 }
@@ -57,4 +57,3 @@ export default navigationState
 //       return state
 //   }
 // }
-

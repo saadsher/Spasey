@@ -12,4 +12,4 @@ const App = () => (
     <TabsRootContainer />
   </Provider>
 )
-AppRegistry.registerComponent('RNExperimentalRedux', () => App)
+AppRegistry.registerComponent('Spasey', () => App)
