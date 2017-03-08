@@ -5,7 +5,7 @@ const {
 } = NavigationExperimental
 
 const initialState = {
-  index: 0,
+  index: 2,
   key: 'root',
   routes: [
     {

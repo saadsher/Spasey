@@ -1,4 +1,4 @@
-# React Native Navigator Experimental + Redux
+<!-- # React Native Navigator Experimental + Redux
 
 > This application uses React Native version 0.28.0-rc.0 or higher
 
@@ -34,4 +34,11 @@ npm install
 git checkout part3-tabs-part2
 ```
 
-5 Run the project in either an Android or iOS environment.
+5 Run the project in either an Android or iOS environment. -->
+
+# Spasey
+
+### Features
+###### IOS Navigation
+###### Redux pattern
+###### Mapbox / Leafjs

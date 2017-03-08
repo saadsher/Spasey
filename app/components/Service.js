@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   View,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableHighlight
@@ -33,78 +34,67 @@ const routeValet = {
 const Service = ({_handleNavigate}) => (
   <View style={styles.container}>
     <Text style={styles.title}>S E R V I C E</Text>
-    <TouchableHighlight underlayColor='darkslategray' onPress={() => _handleNavigate(routeChat)} style={styles.chatbtn}>
-      <Text style={styles.label}>C H A T</Text>
-    </TouchableHighlight>
-    <TouchableHighlight underlayColor='lightslategray' onPress={() => _handleNavigate(routePostal)} style={styles.postalbtn}>
-      <Text style={styles.label}>P O S T A L</Text>
-    </TouchableHighlight>
-    <TouchableHighlight underlayColor='teal' onPress={() => _handleNavigate(routeValet)} style={styles.valetbtn}>
-      <Text style={styles.label}>V A L E T</Text>
-    </TouchableHighlight>
+    <ScrollView style={styles.body}>
+      <TouchableHighlight underlayColor='darkgray' onPress={() => _handleNavigate(routeChat)} style={styles.chatbtn}>
+        <Text style={styles.label}>C H A T</Text>
+      </TouchableHighlight>
+      <TouchableHighlight underlayColor='darkgray' onPress={() => _handleNavigate(routePostal)} style={styles.postalbtn}>
+        <Text style={styles.label}>P O S T A L</Text>
+      </TouchableHighlight>
+      <TouchableHighlight underlayColor='darkgray' onPress={() => _handleNavigate(routeValet)} style={styles.valetbtn}>
+        <Text style={styles.label}>V A L E T</Text>
+      </TouchableHighlight>
+    </ScrollView>
   </View>
 )
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'tan',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 21,
-    marginBottom: 50
   },
   title: {
-    position: 'absolute',
-    top: 21,
-    left: 0,
-    width: 373,
     fontSize: 11,
     textAlign: 'center',
-    color: 'darkslategray'
+    color: 'white',
+    backgroundColor: 'darkslategray',
+    paddingTop: 21,
+    paddingBottom: 7
   },
-  btncontainer: {
-    justifyContent: 'center',
-    marginBottom: 50
+  body: {
+    backgroundColor: 'darkslategray',
   },
   label: {
-    color: 'white',
+    color: 'darkslategray',
     fontSize: 24,
     textAlign: 'center'
   },
-  image: {
-    width: 250,
-    height: 250
-  },
   chatbtn: {
-    width: 373,
-    height: 150,
+    height: 192,
     padding: 10,
-    marginBottom: 5,
     opacity: .7,
-    backgroundColor: 'darkslategray',
+    backgroundColor: 'white',
+    borderBottomWidth: 5,
+    borderBottomColor: '#203737',
     justifyContent: 'center',
-    alignItems: 'center'
+    marginTop: -20,
   },
   postalbtn: {
-    width: 373,
-    height: 150,
+    height: 192,
     padding: 10,
-    marginBottom: 5,
     opacity: .7,
-    backgroundColor: 'lightslategray',
+    backgroundColor: 'white',
+    borderBottomWidth: 5,
+    borderBottomColor: '#203737',
     justifyContent: 'center',
-    alignItems: 'center'
   },
   valetbtn: {
-    width: 373,
-    height: 150,
+    height: 192,
     padding: 10,
-    marginBottom: 5,
     opacity: .7,
-    backgroundColor: 'teal',
+    backgroundColor: 'white',
+    borderBottomWidth: 5,
+    borderBottomColor: '#203737',
     justifyContent: 'center',
-    alignItems: 'center'
   }
 })
 

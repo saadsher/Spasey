@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
+import Login from '../views/login'
+import ChatConvo from './ChatConvo'
 import Valet from './Valet'
 import Postal from './Postal'
 import Chat from './Chat'
 import Service from './Service'
-import Feedback from './Feedback'
-import Profile from './Profile'
-import MapboxList from './MapboxList'
-import Home from './Home'
 
 import {
   BackAndroid,
@@ -33,20 +31,14 @@ class NavRoot extends Component {
   _renderScene (props) {
     const prefix = 'scene_'
     const { scene } = props
-    if (scene.key === prefix + 'home') {
-      return <Home />
+    if (scene.key === prefix + 'login') {
+      return <Login _handleNavigate={this._handleNavigate.bind(this)} />
     }
-    // if (scene.key === prefix + 'mapboxlist') {
-    //   return <MapboxList />
-    // }
-    // if (scene.key === prefix + 'feedback') {
-    //   return <Feedback />
-    // }
     if (scene.key === prefix + 'service') {
       return <Service _handleNavigate={this._handleNavigate.bind(this)} />
     }
     if (scene.key === prefix + 'chat') {
-      return <Chat _goBack={this._handleBackAction.bind(this)} />
+      return <Chat _handleNavigate={this._handleNavigate.bind(this)}  _goBack={this._handleBackAction.bind(this)} />
     }
     if (scene.key === prefix + 'postal') {
       return <Postal _goBack={this._handleBackAction.bind(this)} />
@@ -54,9 +46,9 @@ class NavRoot extends Component {
     if (scene.key === prefix + 'valet') {
       return <Valet _goBack={this._handleBackAction.bind(this)} />
     }
-    // if (scene.key === prefix + 'profile') {
-    //   return <Profile />
-    // }
+    if (scene.key === prefix + 'chatconvo') {
+      return <ChatConvo _goBack={this._handleBackAction.bind(this)} />
+    }
   }
   _handleBackAction () {
     if (this.props.navigation.index === 0) {

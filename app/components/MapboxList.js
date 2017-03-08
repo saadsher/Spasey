@@ -1,37 +1,33 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
+import List from './List'
 
 const MapboxList = () => (
   <View style={styles.container}>
     <Text style={styles.title}>L I S T</Text>
-    <Image
+    {/*<Image
       style={styles.image}
-      source={{ uri: 'https://i.imgur.com/zwx84jE.png' }}/>
+      source={{ uri: 'https://i.imgur.com/zwx84jE.png' }}/>*/}
+    <List style={styles.list}/>
   </View>
 )
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'indianred',
-    alignItems: 'center',
-    paddingTop: 21,
-    marginBottom: 50
+    backgroundColor: 'darkslategray',
   },
   title: {
     fontSize: 11,
     textAlign: 'center',
-    color: 'white'
-  },
-  text: {
     color: 'white',
-    marginTop: 100,
-    fontSize: 24,
-    textAlign: 'center'
+    backgroundColor: 'darkslategray',
+    paddingTop: 21,
+    paddingBottom: 7
   },
-  image: {
-    width: 250,
-    height: 250
+  list: {
+    marginTop: -30,
+    alignSelf: 'stretch'
   }
 })
 

@@ -4,9 +4,6 @@ import Icon from 'react-native-vector-icons/Ionicons'
 const { Reducer: NavigationReducer } = NavigationExperimental
 const { JumpToAction } = NavigationReducer.TabsReducer
 
-import Chat from './Chat'
-import Postal from './Postal'
-import Valet from './Valet'
 import Feedback from './Feedback'
 import Profile from './Profile'
 import MapboxList from './MapboxList'
@@ -26,18 +23,12 @@ class Tabs extends Component {
         return <Home />
       case 'mapboxlist':
         return <MapboxList />
-      case 'feedback':
-        return <Feedback />
       case 'service':
         return <Service />
+      case 'feedback':
+        return <Feedback />
       case 'profile':
         return <Profile />
-      case 'chat':
-        return <Chat />
-      case 'postal':
-        return <Postal />
-      case 'valet':
-        return <Valet />
     }
   }
   render () {
